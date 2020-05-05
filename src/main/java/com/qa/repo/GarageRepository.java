@@ -1,11 +1,12 @@
 package com.qa.repo;
 
-import com.qa.domain.Car;
+import com.qa.domain.Garage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CarsRepository extends JpaRepository<Car, Long> {
+public interface GarageRepository extends JpaRepository<Garage, Long> {
 
-    Car findByModel(String model);
+    Garage findByName(String name);
+
 }
