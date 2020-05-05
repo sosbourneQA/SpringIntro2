@@ -2,7 +2,7 @@ package com.qa.service;
 
 import com.qa.domain.Garage;
 import com.qa.exceptions.GarageNotFoundException;
-import com.qa.repo.GarageRepository;
+import com.qa.repo.GaragesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 public class GarageService {
 
-    private final GarageRepository repo;
+    private final GaragesRepository repo;
 
     @Autowired
-    public GarageService(GarageRepository repo) {
+    public GarageService(GaragesRepository repo) {
         this.repo = repo;
     }
 

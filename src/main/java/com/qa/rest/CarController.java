@@ -3,7 +3,6 @@ package com.qa.rest;
 import com.qa.domain.Car;
 import com.qa.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.*;
 
 
