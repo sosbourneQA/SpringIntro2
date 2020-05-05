@@ -1,6 +1,6 @@
 package com.qa.rest;
 
-//import com.qa.service.CarService;
+
 import com.qa.domain.Garage;
 import com.qa.service.GarageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,22 +26,22 @@ public class GarageController {
     }
 
     @PostMapping("/createGarage")
-    public Garage createCar(@RequestBody Garage garage) {
+    public Garage createGarage(@RequestBody Garage garage) {
         return this.service.createGarage(garage);
     }
 
     @DeleteMapping("/deleteGarage/{id}")
-    public boolean deleteCar(@PathVariable Long id) {
+    public boolean deleteGarage(@PathVariable Long id) {
         return this.service.deleteGarage(id);
     }
 
-    @GetMapping("/getCarById/{id}")
-    public Garage getCarById(@PathVariable Long id) {
+    @GetMapping("/getGarageById/{id}")
+    public Garage getGarageById(@PathVariable Long id) {
         return this.service.findGarageById(id);
     }
 
-    @PutMapping("/updateCar/{id}")
-    public Garage updateCar(@PathVariable Long id, @RequestBody Garage garage) {
+    @PutMapping("/updateGarage/{id}")
+    public Garage updateGarage(@PathVariable Long id, @RequestBody Garage garage) {
         return this.service.updateGarage(id, garage);
     }
 

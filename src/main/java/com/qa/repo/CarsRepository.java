@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CarsRepository extends JpaRepository<Car, Long> {
 
-    Car findByModel(String model);
+//    Car findByModel(String model);
 }

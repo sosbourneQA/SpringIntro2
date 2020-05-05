@@ -16,6 +16,14 @@ public class Car {
     @ManyToOne(targetEntity = Garage.class)
     private Garage garage;
 
+    public Car() {
+    }
+
+    public Car(String model, Double price) {
+        this.model = model;
+        this.price = price;
+    }
+
     public Long getId() {
         return id;
     }
@@ -40,18 +48,27 @@ public class Car {
         this.price = price;
     }
 
+    public Garage getGarage() {
+        return garage;
+    }
+
+    public void setGarage(Garage garage) {
+        this.garage = garage;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return Objects.equals(id, car.id) &&
+        return id.equals(car.id) &&
                 Objects.equals(model, car.model) &&
-                Objects.equals(price, car.price);
+                Objects.equals(price, car.price) &&
+                Objects.equals(garage, car.garage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, model, price);
+        return Objects.hash(id, model, price, garage);
     }
 }

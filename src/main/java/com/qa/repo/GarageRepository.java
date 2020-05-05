@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GarageRepository extends JpaRepository<Garage, Long> {
 
-    Garage findByName(String name);
+//    Garage findByName(String name);
 
 }
